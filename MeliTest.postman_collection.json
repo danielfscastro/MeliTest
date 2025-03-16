@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "76ab7baf-3a42-47c4-a295-523b8a2296e5",
+		"name": "MeliTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15250337"
+	},
+	"item": [
+		{
+			"name": "approve operation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\": \"approve_payments\", \r\n   \"params\": {\r\n   \"id\": 1234,\r\n   \"value\": 550.0\r\n   },\"externalId\":\"5311aef4\"\r\n   }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/operation/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"operation",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancel account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\": \"cancel_account\", \r\n   \"params\": {\r\n   \"id\": 499,\r\n   \"value\": 550.0\r\n   },\"externalId\":\"5311aef4\"\r\n   }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/operation/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"operation",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lista de operacoes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 672, \"value\": 345.76 }, \"externalId\": \"jabc7h1hg2\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 908, \"value\": 829.22 }, \"externalId\": \"0krf3h7z5d\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 559, \"value\": 254.12 }, \"externalId\": \"3acv9w4k8b\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 433, \"value\": 614.18 }, \"externalId\": \"do6kl8j1v4\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 908, \"value\": 123.11 }, \"externalId\": \"7hv1v6g8kp\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 102, \"value\": 412.89 }, \"externalId\": \"ld3frh0b3i\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 197, \"value\": 567.54 }, \"externalId\": \"1mxx7h5lrs\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 278, \"value\": 849.40 }, \"externalId\": \"ufk7ttw4g6\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 836, \"value\": 456.36 }, \"externalId\": \"2ou7t1fx9j\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 191, \"value\": 230.44 }, \"externalId\": \"s6hf3k8zjg\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 80, \"value\": 930.58 }, \"externalId\": \"o9hzs13y3w\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 461, \"value\": 905.43 }, \"externalId\": \"pq4z2mc0uo\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 225, \"value\": 312.99 }, \"externalId\": \"9aj8mw3qit\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 780, \"value\": 278.15 }, \"externalId\": \"gws5yr2bsi\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 776, \"value\": 624.90 }, \"externalId\": \"min3fhtlwu\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 196, \"value\": 512.42 }, \"externalId\": \"x9r2ik6h2f\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 239, \"value\": 673.70 }, \"externalId\": \"h0nbl3y8g7\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 134, \"value\": 146.82 }, \"externalId\": \"rb2hx4qzre\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 415, \"value\": 410.58 }, \"externalId\": \"s8w2pmm5se\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 802, \"value\": 234.29 }, \"externalId\": \"vn6am28xt1\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 357, \"value\": 593.99 }, \"externalId\": \"1jj3bnra7a\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 654, \"value\": 194.68 }, \"externalId\": \"2an8z1q6cj\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 423, \"value\": 128.12 }, \"externalId\": \"q2z6e10epa\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 376, \"value\": 879.40 }, \"externalId\": \"k3h4f2prrs\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 918, \"value\": 743.67 }, \"externalId\": \"8q0amd3wv8\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 194, \"value\": 256.50 }, \"externalId\": \"7jn3zb8lr0\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 312, \"value\": 99.90 }, \"externalId\": \"k5g5t4xclr\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 284, \"value\": 45.85 }, \"externalId\": \"u8y7c7vbw4\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 452, \"value\": 556.78 }, \"externalId\": \"e1m2h5d0vn\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 903, \"value\": 732.34 }, \"externalId\": \"ojg8qe8s1m\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 972, \"value\": 408.23 }, \"externalId\": \"ch2cp03rla\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 561, \"value\": 512.90 }, \"externalId\": \"x7d9q2tf9c\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 618, \"value\": 220.56 }, \"externalId\": \"2p3g6semg1\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 337, \"value\": 673.90 }, \"externalId\": \"k4x8f2gji0\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 420, \"value\": 410.78 }, \"externalId\": \"s6u2c7t0q5\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 243, \"value\": 342.16 }, \"externalId\": \"h7z5m0uf0i\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 681, \"value\": 879.99 }, \"externalId\": \"2h9n5e2vni\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 451, \"value\": 123.67 }, \"externalId\": \"r3c6g9xm4f\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 815, \"value\": 932.78 }, \"externalId\": \"w5f8l2opeh\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 284, \"value\": 758.56 }, \"externalId\": \"t9g1h7qrcj\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 492, \"value\": 511.92 }, \"externalId\": \"v7r9o2qgs4\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 370, \"value\": 784.90 }, \"externalId\": \"b5f8z4hju0\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 659, \"value\": 234.00 }, \"externalId\": \"8n7e6j9bpx\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 339, \"value\": 845.12 }, \"externalId\": \"3u6s2t8ndm\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 769, \"value\": 368.45 }, \"externalId\": \"d1m4r6a8qg\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 250, \"value\": 109.90 }, \"externalId\": \"hd8g3n9t1n\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 460, \"value\": 650.25 }, \"externalId\": \"3j6m7a5by0\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 865, \"value\": 999.99 }, \"externalId\": \"c8o7l5gqxs\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 907, \"value\": 412.30 }, \"externalId\": \"kb6a3m4act\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 192, \"value\": 345.67 }, \"externalId\": \"vz6n9b8q0l\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 721, \"value\": 180.45 }, \"externalId\": \"f1z5u8gtqw\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 685, \"value\": 756.98 }, \"externalId\": \"p0k8w6xrj0\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 543, \"value\": 612.12 }, \"externalId\": \"h9g2t8s1vw\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 379, \"value\": 245.30 }, \"externalId\": \"r5o7e8vaix\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 834, \"value\": 49.99 }, \"externalId\": \"j6x7y9k0ht\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 186, \"value\": 25.75 }, \"externalId\": \"m3g2a4q2y5\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 478, \"value\": 853.40 }, \"externalId\": \"b2a0j9k1l8\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 246, \"value\": 719.45 }, \"externalId\": \"v2k5r8b2qo\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 915, \"value\": 105.73 }, \"externalId\": \"t8s3x6q7gl\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 593, \"value\": 499.99 }, \"externalId\": \"z3f2h0m8k7\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 611, \"value\": 379.80 }, \"externalId\": \"n4v1e7z2hb\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 457, \"value\": 68.89 }, \"externalId\": \"x5y6o3j7fs\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 317, \"value\": 859.99 }, \"externalId\": \"g9o7a4x5q2\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 963, \"value\": 468.15 }, \"externalId\": \"g5r9z4s8o1\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 732, \"value\": 851.72 }, \"externalId\": \"z7j5e7q6h3\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 689, \"value\": 234.34 }, \"externalId\": \"b5w3k9x9q2\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 376, \"value\": 543.10 }, \"externalId\": \"n8h4s1t2p0\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 813, \"value\": 782.65 }, \"externalId\": \"t9u8l7g4j1\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 654, \"value\": 123.45 }, \"externalId\": \"x3d2o5q0f9\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 321, \"value\": 412.00 }, \"externalId\": \"k7d8x1h5z0\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 542, \"value\": 678.90 }, \"externalId\": \"j3x1y5r8p2\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 850, \"value\": 590.40 }, \"externalId\": \"y2n1o3g8h5\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 491, \"value\": 105.67 }, \"externalId\": \"k9h2e5f6q8\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 752, \"value\": 420.67 }, \"externalId\": \"h8g2k4z6j1\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 816, \"value\": 238.78 }, \"externalId\": \"p3r5t6x9u4\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 334, \"value\": 145.88 }, \"externalId\": \"g6b9d8e2z5\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 567, \"value\": 999.99 }, \"externalId\": \"n2a0c1m3x8\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 299, \"value\": 365.12 }, \"externalId\": \"d1z3x9j3r7\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 480, \"value\": 756.45 }, \"externalId\": \"z4m1w8t5g8\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 215, \"value\": 550.50 }, \"externalId\": \"h0f9p8g2l9\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 673, \"value\": 482.22 }, \"externalId\": \"t1q6g1s9a5\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 581, \"value\": 123.45 }, \"externalId\": \"y8g3k2b4x3\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 349, \"value\": 873.21 }, \"externalId\": \"u3e7z6x9h3\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 761, \"value\": 920.44 }, \"externalId\": \"z0j5b9a2l6\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 497, \"value\": 546.78 }, \"externalId\": \"r2f7k8m8s6\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 275, \"value\": 412.33 }, \"externalId\": \"d5h8l1g6p4\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 937, \"value\": 542.89 }, \"externalId\": \"r6v9u2k3j1\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 888, \"value\": 760.11 }, \"externalId\": \"w5d3q0x8b7\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 456, \"value\": 98.67 }, \"externalId\": \"x3n1t9s2l5\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 312, \"value\": 220.50 }, \"externalId\": \"e4k8g7t5z1\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 100, \"value\": 315.65 }, \"externalId\": \"a6g0j8r4p9\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 819, \"value\": 999.99 }, \"externalId\": \"h4e6t7y9q3\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 273, \"value\": 712.83 }, \"externalId\": \"s8z5g0h2r8\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 491, \"value\": 423.44 }, \"externalId\": \"l3x6m7p0k1\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 732, \"value\": 125.90 }, \"externalId\": \"n9y1h0b3a4\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 234, \"value\": 547.77 }, \"externalId\": \"f1v2q3h4s5\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 456, \"value\": 899.99 }, \"externalId\": \"o8l0e7z1t6\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 671, \"value\": 559.88 }, \"externalId\": \"y4b1t6k9h0\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 230, \"value\": 452.12 }, \"externalId\": \"z3m8k2p6r3\" },\r\n    { \"name\": \"approve_payments\", \"params\": { \"id\": 485, \"value\": 799.35 }, \"externalId\": \"h8g5j9y2t1\" },\r\n    { \"name\": \"refund_payments\", \"params\": { \"id\": 569, \"value\": 140.50 }, \"externalId\": \"w2y2q3z4p6\" },\r\n    { \"name\": \"apply_discount_purchase\", \"params\": { \"id\": 823, \"value\": 360.70 }, \"externalId\": \"d7f2a7x5k3\" },\r\n    { \"name\": \"cancel_account\", \"params\": { \"id\": 214, \"value\": 478.25 }, \"externalId\": \"q5r6u1e0z8\" }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/operation/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"operation",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get operation by external id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/operation/fetch?externalId=5311aef4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"operation",
+						"fetch"
+					],
+					"query": [
+						{
+							"key": "externalId",
+							"value": "5311aef4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
