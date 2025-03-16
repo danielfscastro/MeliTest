@@ -1,0 +1,19 @@
+package br.com.meliteste.application.core.usecase.impl;
+
+import br.com.meliteste.application.ports.out.FindOperationByExternalIdOutputPort;
+import br.com.meliteste.application.core.domain.Operation;
+import br.com.meliteste.application.core.exception.ClientResponseStatusException;
+import br.com.meliteste.application.core.usecase.FindOperationsUseCase;
+
+public class FindOperationsUseCaseImpl implements FindOperationsUseCase {
+    private final FindOperationByExternalIdOutputPort findOperationByExternalId;
+
+    public FindOperationsUseCaseImpl( FindOperationByExternalIdOutputPort findOperationByExternalId) {
+        this.findOperationByExternalId = findOperationByExternalId;
+    }
+
+    @Override
+    public Operation find(String externalId) {
+        return findOperationByExternalId.find(externalId).orElseThrow(() -> new ClientResponseStatusException(400,"Operation not found"));
+    }
+}

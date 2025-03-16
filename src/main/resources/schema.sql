@@ -1,0 +1,6 @@
+CREATE TABLE Operation (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    params CLOB,
+    name VARCHAR(100) NOT NULL,
+    external_id VARCHAR(100) NOT NULL UNIQUE
+);

@@ -1,0 +1,95 @@
+Implemente uma classe que permita a execução de operações diversas, como: 
+
+
+- Aprovar um pagamento. 
+
+- Cancelar uma conta.
+
+- Aplicar um desconto em uma compra.
+
+- Estornar um pagamento. 
+
+- (Podem surgir novas operações).
+
+
+Cada operação deve ter um nome único, sua API vai receber como entrada o nome da operação e os parametros para executa-la. Você deve executar e salvar em um BD (input e resultado da execução). Deve ser possível também buscar uma operação executada por um identificador externo, informado pelo cliente. 
+
+
+Você deve tratar os erros conforme abaixo: 
+
+- 424 deve fazer retry.
+
+- 404 deve retornar sucesso.
+
+- 400, 422 e maior 499 deve retornar status 424.
+
+
+Exemplo da sua entrada:
+
+
+input = {
+
+   "operation": "approve_payment", //operation_name
+
+   "params": {
+
+       "id": 1234,
+
+       "value": 550.0
+
+   },
+
+   "externalID": "5311aef4"
+
+}
+
+
+Pode-se assumir que os métodos abaixo já existem: 
+
+
+/** HTTP Client Exception **/
+
+public class ClientResponseStatusException extends RuntimeException {
+
+Integer status;
+
+};
+
+
+/** Gateways **/
+
+public interface PaymentsGateway {
+
+   boolean approve(long paymentId) throws ClientResponseStatusException;
+
+};
+
+
+public interface AccountGateway {
+
+  void cancel(long accountId) throws ClientResponseStatusException;
+
+};
+
+
+public interface PurchaseGateway {
+
+  double applyDiscount(
+
+long purchaseId, 
+
+double discountValue) throws ClientResponseStatusException;
+
+};
+
+
+public interface PaymentsGateway {
+
+  boolean refundPayment(long paymentId) throws ClientResponseStatusException;
+
+};
+
+
+/** Repository **/
+
+public interface OperationExecutionRepository extends CrudRepository<Object, Long>{}
