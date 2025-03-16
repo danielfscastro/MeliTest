@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class ApplyDiscountPurchaseImpl implements ApplyDiscountPurchaseGateway {
 
     public double applyDiscount(long purchaseId, double discountValue) throws ClientResponseStatusException  {
-        System.out.println("aplicou disconto na compra");
+//        System.out.println("aplicou disconto na compra");
         return 0;
     }
 };

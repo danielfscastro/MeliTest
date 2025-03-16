@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class RefundPaymentsGatewayImpl implements RefundPaymentsGateway {
 
     public boolean refundPayment(long paymentId) throws ClientResponseStatusException{
-      System.out.println("reembolsou pagamento");
+//      System.out.println("reembolsou pagamento");
       return false;
     }
 };

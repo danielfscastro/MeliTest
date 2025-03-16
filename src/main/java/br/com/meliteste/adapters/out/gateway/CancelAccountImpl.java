@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class CancelAccountImpl implements CancelAccountGateway {
 
     public boolean cancel(long accountId) throws ClientResponseStatusException{
-        System.out.println("tentando cancelar a conta");
+//        System.out.println("tentando cancelar a conta");
 
         return true;
     }

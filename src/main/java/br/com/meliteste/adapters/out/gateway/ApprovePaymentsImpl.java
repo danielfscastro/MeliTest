@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class ApprovePaymentsImpl implements ApprovePaymentsGateway {
 
    public boolean approve(long paymentId) throws ClientResponseStatusException{
-      System.out.println("aprovou pagamento");
+//      System.out.println("aprovou pagamento");
       return false;
    }
 };
